@@ -38,5 +38,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   my_new_project:
     # Applies to all files under models/example/
+    # This config block applies to all models in your project
+   
     example:
       +materialized: table
+     +schema: "{{ generate_schema_name(custom_schema_name='your_project_schema', node=model) }}"
+
+# Custom macro for schema naming based on the target
+macro-paths: ["macros"] # Ensure your macros folder is defined  
