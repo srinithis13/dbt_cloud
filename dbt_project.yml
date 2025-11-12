@@ -39,5 +39,5 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
-      +schema: "{{target.schema}}_{{env_var('DBT_GIT_BRANCH')|lower|replace('/','_') }}"
+      +schema: "{{target.schema}}_{{env_var('DBT_GIT_BRANCH','main')|lower|replace('/','_') }}"
 
