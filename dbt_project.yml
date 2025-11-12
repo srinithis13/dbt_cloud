@@ -42,7 +42,7 @@ models:
    
     example:
       +materialized: table
-     +schema: "{{ generate_schema_name(custom_schema_name='your_project_schema', node=model) }}"
+
+     +schema: "{{ generate_schema_name(custom_schema_name='my_new_project', node=model) }}"
 
 # Custom macro for schema naming based on the target
-macro-paths: ["macros"] # Ensure your macros folder is defined  
