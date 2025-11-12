@@ -23,7 +23,7 @@ target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
-
+"{{target.schema}}*{{env_var('DBT_GIT_BRANCH')|lower|replace('/','_')}}"
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
@@ -40,3 +40,4 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+
