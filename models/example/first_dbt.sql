@@ -11,7 +11,7 @@
 
 with source_data as (
 
-    select 100 as id
+    select 1000 as id
     union all
     select null as id
 
@@ -25,4 +25,5 @@ from source_data
 */
 
 -- where id is not null
+
 
